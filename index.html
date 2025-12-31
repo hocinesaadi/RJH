@@ -1,87 +1,123 @@
 <!doctype html>
 <html lang="fr">
-
 <head>
-    <title id="titleWeb"></title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta charset="utf-8">
+<title>Bonne Année Mon Amour ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/spinload.css">
-    <link rel="stylesheet" type="text/css" href=" https://fonts.googleapis.com/css?family=Pacifico" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<style>
+body{
+    margin:0;
+    min-height:100vh;
+    background:linear-gradient(120deg,#1a002b,#3a004f);
+    color:#fff;
+    font-family:'Pacifico',cursive;
+    overflow:hidden;
+}
+.wrapper{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+}
+h2{color:#ffd700;text-shadow:0 0 10px #ff69b4;}
+h4{font-family:Arial;font-size:15px;opacity:.9;}
+.love-card{
+    background:rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:25px;
+    margin-top:20px;
+    box-shadow:0 0 25px rgba(255,0,120,.4);
+    backdrop-filter:blur(6px);
+}
+.love-card h3{color:#ffb6c1;}
+.love-card p{font-size:17px;line-height:1.7;}
+.hearts span{
+    position:fixed;
+    top:-10%;
+    font-size:22px;
+    animation:fall 6s linear infinite;
+}
+@keyframes fall{
+    0%{top:-10%;opacity:0}
+    10%{opacity:1}
+    100%{top:110%;opacity:0}
+}
+.music-toggle{
+    background:none;border:none;
+    font-size:26px;color:#fff;margin-top:15px;
+}
+</style>
 </head>
 
 <body onload="loadSound()">
-    <div class="wrapper">
-        <!-- Preloader -->
-        <div id="preloader">
-            <div class="spinner">
-                <div class="rect1"></div>
-                <div class="rect2"></div>
-                <div class="rect3"></div>
-                <div class="rect4"></div>
-                <div class="rect5"></div>
-            </div>
-        </div>
-        <div id="bg"></div>
-        <div class="romantic-overlay"></div>
-        <div class="hearts" aria-hidden="true">
-            <span>❤</span><span>❤</span><span>❤</span><span>❤</span><span>❤</span>
-        </div>
-        <div class="petals" aria-hidden="true">
-            <span>🌸</span><span>🌺</span><span>🌷</span><span>🌹</span><span>🌸</span>
-        </div>
-        <div class="bouquets">
-            <span>💐</span><span>🌹</span><span>🌸</span><span>💐</span><span>🌷</span><span>🌺</span>
-        </div>
-        <div class="content">
-            <header>
-                <h2 id="title"></h2>
-                <h4 id="desc"></h4>
-            </header>
-            <div class="love-card">
-                <h3>Pour Rokia</h3>
-                <p id="loveMessage"></p>
-                <div class="counter"><span id="loveCounter"></span></div>
-            </div>
-            <button id="yes" type="button" class="btn btn-danger btn-lg"> </button>
-            <button id="no" type="button" class="btn btn-info btn-lg"></button>
-            <button id="musicToggle" class="music-toggle" title="Musique">🔊</button>
-        </div>
-    </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    <script src="./config.js"></script>
-    <script src="./js/main.js"></script>
 
-    <script>
-        function loadSound() {
-            window.bgAudio = new Audio('sound/sound.mp3');
-            window.bgAudio.loop = true;
-            window.bgAudio.volume = 0.7;
-            window.bgAudio.play().catch(function(){});
-            var btn = document.getElementById('musicToggle');
-            if (btn) {
-                btn.addEventListener('click', function(){
-                    if (!window.bgAudio) return;
-                    if (window.bgAudio.paused) {
-                        window.bgAudio.play();
-                        btn.textContent = '🔊';
-                    } else {
-                        window.bgAudio.pause();
-                        btn.textContent = '🔈';
-                    }
-                });
-            }
-        }
-    </script>
+<div class="hearts">
+<span style="left:10%">❤️</span>
+<span style="left:30%">❤️</span>
+<span style="left:50%">❤️</span>
+<span style="left:70%">❤️</span>
+<span style="left:90%">❤️</span>
+</div>
+
+<div class="wrapper">
+<div>
+
+<h2>✨ Bonne Année Mon Amour ✨</h2>
+<h4>Même loin de moi, mon cœur n’a jamais quitté le tien</h4>
+
+<div class="love-card">
+<h3>Pour ma femme Rokia 💖</h3>
+<p>
+Mon âme,<br><br>
+
+Une nouvelle année commence,<br>
+et ton absence me rappelle<br>
+à quel point ton amour est ma maison.<br><br>
+
+La distance a séparé nos corps,<br>
+mais jamais nos cœurs.<br>
+Chaque nuit, je te parle en silence,<br>
+et chaque prière porte ton nom.<br><br>
+
+Si tu savais combien je t’aime,<br>
+au-delà du temps, au-delà des kilomètres,<br>
+au-delà des mots que je n’arrive pas à dire.<br><br>
+
+Bonne année ma femme,<br>
+là où tu es, souviens-toi :<br>
+je t’attends, je t’aime,<br>
+et je ne t’ai jamais quittée ❤️
+</p>
+</div>
+
+<button class="btn btn-danger btn-lg mt-3">Mon cœur est à toi ❤️</button>
+<button class="btn btn-info btn-lg mt-3">Pour toute la vie 💍</button><br>
+
+<button id="musicToggle" class="music-toggle">🔊</button>
+
+</div>
+</div>
+
+<script>
+function loadSound(){
+    window.bgAudio=new Audio('sound/sound.mp3');
+    bgAudio.loop=true;
+    bgAudio.volume=0.7;
+    bgAudio.play().catch(()=>{});
+    document.getElementById("musicToggle").onclick=function(){
+        if(bgAudio.paused){bgAudio.play();this.textContent="🔊";}
+        else{bgAudio.pause();this.textContent="🔈";}
+    };
+    document.querySelectorAll('.hearts span')
+    .forEach(h=>h.style.animationDelay=Math.random()*5+"s");
+}
+</script>
+
 </body>
-
 </html>
